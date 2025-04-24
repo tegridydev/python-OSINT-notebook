@@ -1,0 +1,71 @@
+/* website/src/pages/index.module.css */
+
+.heroBanner {
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+}
+.heroTitle {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.heroSubtitle {
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.features {
+  padding: 4rem 0;
+  background: #f5f7ff;
+}
+.sectionTitle {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.featureGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+.featureCard {
+  flex: 1 1 250px;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.featureTitle {
+  margin-bottom: 0.5rem;
+}
+.featureDesc {
+  margin: 0;
+}
+
+.quickLinks {
+  padding: 4rem 0;
+}
+.linkGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  gap: 1rem;
+}
+
+.cta {
+  padding: 4rem 0;
+  background: #eef2ff;
+}
+.ctaDesc {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
