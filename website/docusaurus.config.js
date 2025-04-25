@@ -4,7 +4,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Python-OSINT-Handbook',
+  title: 'Python-OSINT-Notebook',
   tagline: 'Passive OSINT via Python',
   favicon: 'img/favicon.ico',
 
@@ -20,7 +20,7 @@ const config = {
 
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'es', 'fr', 'de'], // Scaffold for future translations
   },
 
   presets: [
@@ -36,9 +36,21 @@ const config = {
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
         },
-        blog: false,
+        blog: {
+          showReadingTime: true,
+          editUrl:
+            'https://github.com/tegridydev/python-OSINT-notebook/edit/main/website/',
+        },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
+        },
+        sitemap: {
+          changefreq: 'weekly',
+          priority: 0.5,
+        },
+        gtag: {
+          trackingID: 'G-XXXXXXX',
+          anonymizeIP: true,
         },
       }),
     ],
@@ -47,12 +59,37 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      colorMode: {
+        defaultMode: 'dark',
+        disableSwitch: false,
+        respectPrefersColorScheme: true,
+      },
       image: 'img/docusaurus-social-card.jpg',
-
+      navbar: {
+        title: 'Python-OSINT-Notebook',
+        logo: {
+          alt: 'Python OSINT Logo',
+          src: 'img/favicon.ico',
+        },
+        items: [
+          {to: '/', label: 'Docs', position: 'left'},
+          {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/showcase', label: 'Showcase', position: 'left'},
+          {to: '/docs/scripts/README', label: 'Scripts', position: 'left'},
+          {to: '/contributing', label: 'Contributing', position: 'right'},
+          {to: '/start-here', label: 'Start Here', position: 'right'},
+          {href: 'https://github.com/tegridydev/python-OSINT-notebook', label: 'GitHub', position: 'right'},
+        ],
+      },
+      
+      prism: {
+        theme: prismThemes.github,
+        darkTheme: prismThemes.dracula,
+      },
       announcementBar: {
         id: 'star-us',
         content:
-          '⭐️ If this handbook helps you, please ⭐ the GitHub repo!',
+          '⭐️ If this Notebook helps you, please ⭐ the GitHub repo!',
         backgroundColor: '#fafbfc',
         textColor: '#091E42',
         isCloseable: true,
@@ -64,34 +101,6 @@ const config = {
           autoCollapseCategories: true,
         },
       },
-
-      navbar: {
-        title: 'Python-OSINT-Handbook',
-        logo: {
-          alt: 'OSINT Handbook Logo',
-          src: 'img/logo.svg',
-        },
-        items: [
-          {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Docs',
-          },
-          {
-            type: 'doc',
-            docId: 'pythonosint101',
-            position: 'left',
-            label: 'OSINT101',
-          },
-          {
-            href: 'https://github.com/tegridydev/python-OSINT-notebook',
-            label: 'GitHub',
-            position: 'right',
-          },
-        ],
-      },
-
       footer: {
         style: 'dark',
         links: [
@@ -113,6 +122,10 @@ const config = {
                 label: 'Stack Overflow',
                 href: 'https://stackoverflow.com/questions/tagged/osint',
               },
+              {
+                label: 'Reddit',
+                href: 'https://www.reddit.com/r/OSINT/',
+              },
             ],
           },
           {
@@ -127,17 +140,6 @@ const config = {
           },
         ],
         copyright: `© ${new Date().getFullYear()} tegridydev`,
-      },
-
-      prism: {
-        theme: prismThemes.github,
-        darkTheme: prismThemes.dracula,
-      },
-
-      colorMode: {
-        defaultMode: 'light',
-        disableSwitch: false,
-        respectPrefersColorScheme: false,
       },
 
       tableOfContents: {

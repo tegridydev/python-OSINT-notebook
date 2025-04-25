@@ -5,7 +5,7 @@ title: Introduction & Scope
 
 # Introduction & Scope
 
-Welcome to the **Python-OSINT-Handbook**, your comprehensive, up-to-date reference for performing **passive** Open-Source Intelligence (OSINT) using Python in 2025. Whether you’re a security researcher, threat analyst, journalist, or hobbyist, this guide will help you:
+Welcome to the **Python-OSINT-Notebook**, your comprehensive, up-to-date reference for performing **passive** Open-Source Intelligence (OSINT) using Python in 2025. Whether you’re a security researcher, threat analyst, journalist, or hobbyist, this guide will help you:
 
 - Discover valuable publicly available data without triggering alerts or violating terms of service  
 - Leverage a curated selection of Python libraries, tools, and workflows  
@@ -19,7 +19,7 @@ Welcome to the **Python-OSINT-Handbook**, your comprehensive, up-to-date referen
 
 ---
 
-## How This Handbook Is Organized
+## How This Notebook Is Organized
 
 1. **Core Tools & Libraries**: Deep dives into major frameworks, domain-recon tools, social-media scrapers, and threat-intel platforms.  
 2. **Installation & Configuration**: Step-by-step setup on Linux, Windows, macOS, Docker, plus API key and proxy best practices.  

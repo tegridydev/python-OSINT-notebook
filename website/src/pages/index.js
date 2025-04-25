@@ -1,124 +1,115 @@
 // website/src/pages/index.js
 import React from 'react';
+import clsx from 'clsx';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
-import styles from './index.module.css';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import styles from './video.module.css';
+import HomeNavBoxes from '../components/homepage/HomeNavBoxes';
+import HomepageFeatures from '../components/HomepageFeatures';
 
-const features = [
-  {
-    title: 'Passive Recon',
-    description:
-      'Gather DNS, WHOIS, CT logs, and metadata using read-only APIs and public archives.',
-  },
-  {
-    title: 'Modular Tools',
-    description:
-      'Leverage frameworks like SpiderFoot & Recon-ng, or utilities like Sherlock & snscrape.',
-  },
-  {
-    title: 'Automated Pipelines',
-    description:
-      'Schedule daily runs with cron, GitHub Actions, or Docker-based task runners.',
-  },
-  {
-    title: 'Ethical Practices',
-    description:
-      'Honor ToS, robots.txt, rate limits, and always log your sources.',
-  },
-  {
-    title: 'Extensible Code',
-    description:
-      'Ready Python scripts & examples to customize OSINT workflows.',
-  },
-];
-
-const quickLinks = [
-  { label: 'Introduction', to: '/01-introduction' },
-  { label: 'Frameworks', to: '/tools/02-01-frameworks' },
-  { label: 'Domain Recon', to: '/tools/02-02-domain-infra' },
-  { label: 'Social Media', to: '/tools/02-03-people-social' },
-  { label: 'Threat Intel', to: '/tools/02-04-threat-intel' },
-  { label: 'Installation', to: '/installation/03-01-env-setup' },
-  { label: 'OSINT101 Guide', to: '/pythonosint101' },
-  { label: 'Resources', to: '/07-resources' },
-];
+function HomepageHeader() {
+  const { siteConfig } = useDocusaurusContext();
+  return (
+    <header className={clsx(styles.heroBanner)}>
+      <div className="container text--center">
+        <h1 className="hero__title">Python-OSINT-Notebook</h1>
+        <p className="hero__subtitle" style={{fontSize: '1.3rem', margin: '1rem 0 2rem 0'}}>Your ADHD/autism-friendly, modular toolkit for passive OSINT workflows, scripts, and guides.</p>
+        <div style={{display: 'flex', justifyContent: 'center', gap: '1rem', flexWrap: 'wrap'}}>
+          <Link className="button button--primary button--lg" to="/docs/start-here">Get Started</Link>
+          <Link className="button button--secondary button--lg" to="/docs/scripts/README">Scripts & Tools</Link>
+          <Link className="button button--outline button--lg" to="https://github.com/tegridydev/python-OSINT-notebook">GitHub</Link>
+        </div>
+      </div>
+    </header>
+  );
+}
 
 export default function Home() {
+  const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title="Python-OSINT-Handbook"
-      description="Your guide to completely passive, no-BS OSINT workflows in Python"
+      title={`Welcome to ${siteConfig.title}`}
+      description="Passive Python OSINT workflows, tools, and guides."
     >
-      {/* Hero Section */}
-      <header className={styles.heroBanner}>
-        <div className="container">
-          <h1 className={styles.heroTitle}>Python-OSINT-Handbook</h1>
-          <p className={styles.heroSubtitle}>
-            A complete, up-to-date guide to passive OSINT in Python—no active scans, no legal risk.
-          </p>
-          <div className={styles.buttons}>
-            <Link
-              to="/01-introduction"
-              className="button button--primary button--lg"
-            >
-              Get Started
-            </Link>
-            <Link
-              to="https://github.com/tegridydev/python-OSINT-notebook"
-              className="button button--outline button--lg"
-            >
-              View on GitHub
-            </Link>
-          </div>
-        </div>
-      </header>
-
+      <HomepageHeader />
       <main>
-        {/* Core Features */}
-        <section className={styles.features}>
+        {/* Quick Mission/Intro Block */}
+        <section className="margin-vert--lg">
           <div className="container">
-            <h2 className={styles.sectionTitle}>Core Features</h2>
-            <div className={styles.featureGrid}>
-              {features.map((feature) => (
-                <div key={feature.title} className={styles.featureCard}>
-                  <h3 className={styles.featureTitle}>{feature.title}</h3>
-                  <p className={styles.featureDesc}>{feature.description}</p>
-                </div>
-              ))}
+            <h2 style={{textAlign:'center', fontWeight:700}}>What is this?</h2>
+            <p style={{maxWidth:700, margin:'0 auto', textAlign:'center', fontSize:'1.1rem'}}>
+              <b>Python-OSINT-Notebook</b> is your all-in-one, plug-and-play resource for passive OSINT. Whether you’re neurodivergent, new to OSINT, or just want a no-BS toolkit, you’ll find modular guides, ready-to-run scripts, and ADHD/autism-friendly explanations for every skill level.
+            </p>
+          </div>
+        </section>
+
+        {/* Visual Features Grid */}
+        <section className="margin-vert--lg">
+          <div className="container">
+            <h2 style={{textAlign:'center', fontWeight:700}}>Core Features</h2>
+            <div style={{display:'flex',flexWrap:'wrap',gap:'2rem',justifyContent:'center',marginTop:'2rem'}}>
+              <div style={{flex:'1 1 220px',maxWidth:300,minWidth:220,background:'#282c34',borderRadius:16,padding:24,color:'#fff',textAlign:'center'}}>
+                <img src={require('../img/Boost.svg').default} alt="Recon" width={48} height={48} />
+                <h3>Passive Recon</h3>
+                <p>DNS, WHOIS, CT logs, and metadata with zero noise.</p>
+              </div>
+              <div style={{flex:'1 1 220px',maxWidth:300,minWidth:220,background:'#282c34',borderRadius:16,padding:24,color:'#fff',textAlign:'center'}}>
+                <img src={require('../img/Time.svg').default} alt="Automation" width={48} height={48} />
+                <h3>Automation</h3>
+                <p>Multi-tool scripts for domains, social, threat intel, and more.</p>
+              </div>
+              <div style={{flex:'1 1 220px',maxWidth:300,minWidth:220,background:'#282c34',borderRadius:16,padding:24,color:'#fff',textAlign:'center'}}>
+                <img src={require('../img/Community.svg').default} alt="Community" width={48} height={48} />
+                <h3>Community & Learning</h3>
+                <p>Step-by-step, neurodivergent-friendly docs and real-world use cases.</p>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Quick Links */}
-        <section className={styles.quickLinks}>
+        {/* Scripts Section Preview */}
+        <section className="margin-vert--lg" style={{background:'#f5f6fa',padding:'2rem 0'}}>
           <div className="container">
-            <h2 className={styles.sectionTitle}>Quick Links</h2>
-            <ul className={styles.linkGrid}>
-              {quickLinks.map((link) => (
-                <li key={link.to}>
-                  <Link to={link.to} className="button button--secondary">
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <h2 style={{textAlign:'center', fontWeight:700}}>Featured Scripts</h2>
+            <div style={{display:'flex',flexWrap:'wrap',gap:'1.5rem',justifyContent:'center',marginTop:'2rem'}}>
+              <Link to="/docs/scripts/domain-recon-combo" className="card padding--md" style={{minWidth:210,maxWidth:260,background:'#fff',borderRadius:12,boxShadow:'0 2px 8px #0001'}}>
+                <h4>Domain Recon Combo</h4>
+                <p style={{fontSize:'0.95rem'}}>DNS, WHOIS, CT logs in one shot.</p>
+              </Link>
+              <Link to="/docs/scripts/social-media-multi-profile" className="card padding--md" style={{minWidth:210,maxWidth:260,background:'#fff',borderRadius:12,boxShadow:'0 2px 8px #0001'}}>
+                <h4>Social Multi-Profile</h4>
+                <p style={{fontSize:'0.95rem'}}>Check usernames across major platforms.</p>
+              </Link>
+              <Link to="/docs/scripts/all-in-one-passive-recon" className="card padding--md" style={{minWidth:210,maxWidth:260,background:'#fff',borderRadius:12,boxShadow:'0 2px 8px #0001'}}>
+                <h4>All-in-One Recon</h4>
+                <p style={{fontSize:'0.95rem'}}>Full passive recon workflow.</p>
+              </Link>
+              <Link to="/docs/scripts/shodan-host-analyzer" className="card padding--md" style={{minWidth:210,maxWidth:260,background:'#fff',borderRadius:12,boxShadow:'0 2px 8px #0001'}}>
+                <h4>Shodan Host Analyzer</h4>
+                <p style={{fontSize:'0.95rem'}}>Open ports, banners, and metadata.</p>
+              </Link>
+              <Link to="/docs/scripts/pdf-bulk-metadata" className="card padding--md" style={{minWidth:210,maxWidth:260,background:'#fff',borderRadius:12,boxShadow:'0 2px 8px #0001'}}>
+                <h4>PDF Bulk Metadata</h4>
+                <p style={{fontSize:'0.95rem'}}>Extracts metadata from many PDFs.</p>
+              </Link>
+            </div>
+            <div style={{textAlign:'center',marginTop:'2rem'}}>
+              <Link className="button button--primary button--lg" to="/docs/scripts/README">See All Scripts</Link>
+            </div>
           </div>
         </section>
 
-        {/* Call to Action */}
-        <section className={styles.cta}>
+        {/* Community Section */}
+        <section className="margin-vert--lg">
           <div className="container text--center">
-            <h2>Contribute &amp; Stay Updated</h2>
-            <p className={styles.ctaDesc}>
-              Found an issue or want to add a new tool? Contributions are welcome!
-              Follow the repo for updates and join our community of OSINT practitioners.
-            </p>
-            <Link
-              to="https://github.com/tegridydev/python-OSINT-notebook/issues"
-              className="button button--primary button--lg"
-            >
-              Submit an Issue
-            </Link>
+            <h2>Join the Community</h2>
+            <p style={{fontSize:'1.1rem',maxWidth:700,margin:'0 auto'}}>Share your workflows, ask questions, or just vibe with other OSINT nerds.</p>
+            <div style={{display:'flex',justifyContent:'center',gap:'1.5rem',marginTop:'1rem',flexWrap:'wrap'}}>
+              <a className="button button--secondary" href="https://discord.gg/yourdiscord" target="_blank">Discord</a>
+              <a className="button button--secondary" href="https://twitter.com/yourtwitter" target="_blank">Twitter</a>
+              <a className="button button--secondary" href="https://github.com/tegridydev/python-OSINT-notebook" target="_blank">GitHub</a>
+            </div>
           </div>
         </section>
       </main>

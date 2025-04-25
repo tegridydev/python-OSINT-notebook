@@ -6,6 +6,7 @@
  */
 const sidebars = {
   tutorialSidebar: [
+    'start-here',
     '01-introduction',
     {
       type: 'category',
@@ -33,6 +34,40 @@ const sidebars = {
     '05-automation-pipelines',
     '06-tuning-ethics',
     '07-resources',
+    {
+      type: 'category',
+      label: 'Skill Level Guides',
+      items: [
+        'beginner-guide',
+        'intermediate-guide',
+        'advanced-guide',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Scripts',
+      items: [
+        'scripts/README',
+        'scripts/domain-recon-combo',
+        'scripts/social-media-multi-profile',
+        'scripts/threat-intel-aggregator',
+        'scripts/passive-metadata-harvester',
+        'scripts/all-in-one-passive-recon',
+        'scripts/shodan-host-analyzer',
+        'scripts/github-user-osint',
+        'scripts/email-breach-checker',
+        'scripts/url-screenshotter',
+        'scripts/ipinfo-lookup',
+        'scripts/pdf-bulk-metadata',
+        'scripts/reverse-image-search',
+        'scripts/phone-validator',
+        'scripts/archive-org-snapshots',
+        'scripts/favicon-hash-lookup',
+      ],
+    },
+    'faq',
+    'contributing',
+    'showcase',
     {
       type: 'category',
       label: 'Walkthrough Guides',
