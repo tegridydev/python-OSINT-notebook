@@ -75,7 +75,7 @@ const config = {
           {to: '/', label: 'Docs', position: 'left'},
           {to: '/blog', label: 'Blog', position: 'left'},
           {to: '/showcase', label: 'Showcase', position: 'left'},
-          {to: '/docs/scripts/README', label: 'Scripts', position: 'left'},
+          {to: '/scripts/', label: 'Scripts', position: 'left'},
           {to: '/contributing', label: 'Contributing', position: 'right'},
           {to: '/start-here', label: 'Start Here', position: 'right'},
           {href: 'https://github.com/tegridydev/python-OSINT-notebook', label: 'GitHub', position: 'right'},

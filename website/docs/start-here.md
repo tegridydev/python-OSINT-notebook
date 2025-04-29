@@ -5,9 +5,9 @@ slug: /start-here
 
 # Start Here
 
-Welcome to the **Python OSINT Notebook** — your open-source hub for learning Open Source Intelligence (OSINT) with Python!
+Welcome to the **Python OSINT Notebook** a straight forward open-source hub for learning Open Source Intelligence (OSINT) with Python!
 
-## 🧩 How This Site Works (Lego Block Analogy)
+## 🧩 How This Site Works
 Think of this Notebook as a big box of Lego blocks:
 - Each doc is a block you can snap together
 - You can build simple things (beginner) or complex structures (advanced)

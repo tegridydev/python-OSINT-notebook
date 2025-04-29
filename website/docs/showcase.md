@@ -10,7 +10,6 @@ Welcome to the OSINT Community Showcase! Here we highlight cool projects, script
 ## 🧩 How to Get Featured
 - Built a script, tool, or workflow using this Notebook?
 - Have a write-up, case study, or visual guide?
-- Want to share your experience as a neurodivergent/ADHD/autistic learner?
 
 **Submit your entry by:**
 - Opening a Pull Request (PR) with your addition

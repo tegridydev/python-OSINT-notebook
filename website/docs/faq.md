@@ -6,10 +6,10 @@ slug: /faq
 # Frequently Asked Questions
 
 ## ❓ Who is this for?
-Anyone interested in OSINT — from total beginners to pros, and especially neurodivergent learners.
+Anyone interested in OSINT
 
-## 🧠 Is this ADHD/autism-friendly?
-Absolutely. We use:
+## 🧠 How is this site structured?
+We use:
 - Lego block analogies (build in small steps)
 - Visuals, code samples, and checklists
 - Clear, consistent structure

@@ -27,11 +27,6 @@ Want to help make this the best OSINT resource? You’re awesome! Here’s how y
 4. Open a Pull Request (PR) — describe what you changed and why
 5. Wait for feedback or approval (we’re friendly!)
 
-## 🧠 Neurodivergent/ADHD/Autism-Friendly Tips
-- Use short, clear sentences
-- Add visuals or analogies if you can
-- Don’t stress about “perfect” — every block helps
-- Ask questions in your PR if you’re unsure
 
 ## 🏗️ Style Guide
 - Use simple language and lots of examples
