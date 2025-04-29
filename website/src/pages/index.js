@@ -4,9 +4,6 @@ import clsx from 'clsx';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import styles from './video.module.css';
-import HomeNavBoxes from '../components/homepage/HomeNavBoxes';
-import HomepageFeatures from '../components/HomepageFeatures';
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -50,17 +47,17 @@ export default function Home() {
             <h2 style={{textAlign:'center', fontWeight:700}}>Core Features</h2>
             <div style={{display:'flex',flexWrap:'wrap',gap:'2rem',justifyContent:'center',marginTop:'2rem'}}>
               <div style={{flex:'1 1 220px',maxWidth:300,minWidth:220,background:'#282c34',borderRadius:16,padding:24,color:'#fff',textAlign:'center'}}>
-                <img src={require('../img/Boost.svg').default} alt="Recon" width={48} height={48} />
+                <img src={"/img/Boost.svg"} alt="Recon" width={48} height={48} />
                 <h3>Passive Recon</h3>
                 <p>DNS, WHOIS, CT logs, and metadata with zero noise.</p>
               </div>
               <div style={{flex:'1 1 220px',maxWidth:300,minWidth:220,background:'#282c34',borderRadius:16,padding:24,color:'#fff',textAlign:'center'}}>
-                <img src={require('../img/Time.svg').default} alt="Automation" width={48} height={48} />
+                <img src={"/img/Time.svg"} alt="Automation" width={48} height={48} />
                 <h3>Automation</h3>
                 <p>Multi-tool scripts for domains, social, threat intel, and more.</p>
               </div>
               <div style={{flex:'1 1 220px',maxWidth:300,minWidth:220,background:'#282c34',borderRadius:16,padding:24,color:'#fff',textAlign:'center'}}>
-                <img src={require('../img/Community.svg').default} alt="Community" width={48} height={48} />
+                <img src={"/img/Community.svg"} alt="Community" width={48} height={48} />
                 <h3>Community & Learning</h3>
                 <p>Step-by-step, neurodivergent-friendly docs and real-world use cases.</p>
               </div>
